@@ -1,0 +1,692 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  javax.annotation.Nullable
+ *  net.minecraft.client.Minecraft
+ *  net.minecraft.world.entity.Entity
+ *  net.minecraft.world.entity.LivingEntity
+ *  net.minecraft.world.item.ItemStack
+ *  net.minecraft.world.level.ItemLike
+ *  net.minecraft.world.level.LevelAccessor
+ *  net.minecraftforge.event.entity.living.LivingEvent$LivingTickEvent
+ *  net.minecraftforge.eventbus.api.Event
+ *  net.minecraftforge.eventbus.api.SubscribeEvent
+ *  net.minecraftforge.fml.common.Mod$EventBusSubscriber
+ */
+package net.mcreator.totemsserverhardcore.procedures;
+
+import javax.annotation.Nullable;
+import net.mcreator.totemsserverhardcore.init.KuromymodModItems;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+
+@Mod.EventBusSubscriber
+public class Wither2Procedure {
+    @SubscribeEvent
+    public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+        Wither2Procedure.execute((Event)event, (LevelAccessor)event.getEntity().level, (Entity)event.getEntity());
+    }
+
+    public static void execute(LevelAccessor world, Entity entity) {
+        Wither2Procedure.execute(null, world, entity);
+    }
+
+    /*
+     * Unable to fully structure code
+     */
+    private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
+        if (entity == null) {
+            return;
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v0 = _livEnt.hasEffect();
+        } else {
+            v0 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v1 = _livEnt.m_21205_();
+        } else {
+            v1 = ItemStack.f_41583_;
+        }
+        if (v1.getItem() == KuromymodModItems.WHITER.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.WHITER.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v2 = _livEnt.hasEffect();
+            } else {
+                v2 = -1.0f;
+            }
+            if (v2 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v3 = _livEnt.m_21206_();
+                } else {
+                    v3 = ItemStack.f_41583_;
+                }
+                if (v3.getItem() == KuromymodModItems.WHITER.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.WHITER.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v4 = _livEnt.hasEffect();
+        } else {
+            v4 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v5 = _livEnt.m_21205_();
+        } else {
+            v5 = ItemStack.f_41583_;
+        }
+        if (v5.getItem() == KuromymodModItems.TOTEMDEAD.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEMDEAD.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v6 = _livEnt.hasEffect();
+            } else {
+                v6 = -1.0f;
+            }
+            if (v6 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v7 = _livEnt.m_21206_();
+                } else {
+                    v7 = ItemStack.f_41583_;
+                }
+                if (v7.getItem() == KuromymodModItems.TOTEMDEAD.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEMDEAD.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v8 = _livEnt.hasEffect();
+        } else {
+            v8 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v9 = _livEnt.m_21205_();
+        } else {
+            v9 = ItemStack.f_41583_;
+        }
+        if (v9.getItem() == KuromymodModItems.HORSEE.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.HORSEE.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v10 = _livEnt.hasEffect();
+            } else {
+                v10 = -1.0f;
+            }
+            if (v10 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v11 = _livEnt.m_21206_();
+                } else {
+                    v11 = ItemStack.f_41583_;
+                }
+                if (v11.getItem() == KuromymodModItems.HORSEE.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.HORSEE.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v12 = _livEnt.hasEffect();
+        } else {
+            v12 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v13 = _livEnt.m_21205_();
+        } else {
+            v13 = ItemStack.f_41583_;
+        }
+        if (v13.getItem() == KuromymodModItems.GOLEM_TOTEM.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.GOLEM_TOTEM.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v14 = _livEnt.hasEffect();
+            } else {
+                v14 = -1.0f;
+            }
+            if (v14 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v15 = _livEnt.m_21206_();
+                } else {
+                    v15 = ItemStack.f_41583_;
+                }
+                if (v15.getItem() == KuromymodModItems.GOLEM_TOTEM.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.GOLEM_TOTEM.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v16 = _livEnt.hasEffect();
+        } else {
+            v16 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v17 = _livEnt.m_21205_();
+        } else {
+            v17 = ItemStack.f_41583_;
+        }
+        if (v17.getItem() == KuromymodModItems.TENTACLED.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TENTACLED.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v18 = _livEnt.hasEffect();
+            } else {
+                v18 = -1.0f;
+            }
+            if (v18 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v19 = _livEnt.m_21206_();
+                } else {
+                    v19 = ItemStack.f_41583_;
+                }
+                if (v19.getItem() == KuromymodModItems.TENTACLED.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TENTACLED.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v20 = _livEnt.hasEffect();
+        } else {
+            v20 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v21 = _livEnt.m_21205_();
+        } else {
+            v21 = ItemStack.f_41583_;
+        }
+        if (v21.getItem() == KuromymodModItems.TOTEM_GHAST.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_GHAST.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v22 = _livEnt.hasEffect();
+            } else {
+                v22 = -1.0f;
+            }
+            if (v22 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v23 = _livEnt.m_21206_();
+                } else {
+                    v23 = ItemStack.f_41583_;
+                }
+                if (v23.getItem() == KuromymodModItems.TOTEM_GHAST.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_GHAST.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v24 = _livEnt.hasEffect();
+        } else {
+            v24 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v25 = _livEnt.m_21205_();
+        } else {
+            v25 = ItemStack.f_41583_;
+        }
+        if (v25.getItem() == KuromymodModItems.TOTEM_SLIME.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_SLIME.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v26 = _livEnt.hasEffect();
+            } else {
+                v26 = -1.0f;
+            }
+            if (v26 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v27 = _livEnt.m_21206_();
+                } else {
+                    v27 = ItemStack.f_41583_;
+                }
+                if (v27.getItem() == KuromymodModItems.TOTEM_SLIME.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_SLIME.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v28 = _livEnt.hasEffect();
+        } else {
+            v28 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v29 = _livEnt.m_21205_();
+        } else {
+            v29 = ItemStack.f_41583_;
+        }
+        if (v29.getItem() == KuromymodModItems.CAT.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.CAT.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v30 = _livEnt.hasEffect();
+            } else {
+                v30 = -1.0f;
+            }
+            if (v30 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v31 = _livEnt.m_21206_();
+                } else {
+                    v31 = ItemStack.f_41583_;
+                }
+                if (v31.getItem() == KuromymodModItems.CAT.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.CAT.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v32 = _livEnt.hasEffect();
+        } else {
+            v32 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v33 = _livEnt.m_21205_();
+        } else {
+            v33 = ItemStack.f_41583_;
+        }
+        if (v33.getItem() == KuromymodModItems.TOTEM_SILVERFISH.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_SILVERFISH.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v34 = _livEnt.hasEffect();
+            } else {
+                v34 = -1.0f;
+            }
+            if (v34 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v35 = _livEnt.m_21206_();
+                } else {
+                    v35 = ItemStack.f_41583_;
+                }
+                if (v35.getItem() == KuromymodModItems.TOTEM_SILVERFISH.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_SILVERFISH.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v36 = _livEnt.hasEffect();
+        } else {
+            v36 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v37 = _livEnt.m_21205_();
+        } else {
+            v37 = ItemStack.f_41583_;
+        }
+        if (v37.getItem() == KuromymodModItems.ENDERMITE_TOTEM.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.ENDERMITE_TOTEM.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v38 = _livEnt.hasEffect();
+            } else {
+                v38 = -1.0f;
+            }
+            if (v38 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v39 = _livEnt.m_21206_();
+                } else {
+                    v39 = ItemStack.f_41583_;
+                }
+                if (v39.getItem() == KuromymodModItems.ENDERMITE_TOTEM.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.ENDERMITE_TOTEM.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v40 = _livEnt.hasEffect();
+        } else {
+            v40 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v41 = _livEnt.m_21205_();
+        } else {
+            v41 = ItemStack.f_41583_;
+        }
+        if (v41.getItem() == KuromymodModItems.TOTEMARDILLA.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEMARDILLA.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v42 = _livEnt.hasEffect();
+            } else {
+                v42 = -1.0f;
+            }
+            if (v42 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v43 = _livEnt.m_21206_();
+                } else {
+                    v43 = ItemStack.f_41583_;
+                }
+                if (v43.getItem() == KuromymodModItems.TOTEMARDILLA.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEMARDILLA.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v44 = _livEnt.hasEffect();
+        } else {
+            v44 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v45 = _livEnt.m_21205_();
+        } else {
+            v45 = ItemStack.f_41583_;
+        }
+        if (v45.getItem() == KuromymodModItems.ELDEGUARDIANN.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.ELDEGUARDIANN.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v46 = _livEnt.hasEffect();
+            } else {
+                v46 = -1.0f;
+            }
+            if (v46 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v47 = _livEnt.m_21206_();
+                } else {
+                    v47 = ItemStack.f_41583_;
+                }
+                if (v47.getItem() == KuromymodModItems.ELDEGUARDIANN.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.ELDEGUARDIANN.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v48 = _livEnt.hasEffect();
+        } else {
+            v48 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v49 = _livEnt.m_21205_();
+        } else {
+            v49 = ItemStack.f_41583_;
+        }
+        if (v49.getItem() == KuromymodModItems.TOTEM_RAVAGER.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_RAVAGER.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v50 = _livEnt.hasEffect();
+            } else {
+                v50 = -1.0f;
+            }
+            if (v50 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v51 = _livEnt.m_21206_();
+                } else {
+                    v51 = ItemStack.f_41583_;
+                }
+                if (v51.getItem() == KuromymodModItems.TOTEM_RAVAGER.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_RAVAGER.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v52 = _livEnt.hasEffect();
+        } else {
+            v52 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v53 = _livEnt.m_21205_();
+        } else {
+            v53 = ItemStack.f_41583_;
+        }
+        if (v53.getItem() == KuromymodModItems.TOTEMNUTRIA.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEMNUTRIA.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v54 = _livEnt.hasEffect();
+            } else {
+                v54 = -1.0f;
+            }
+            if (v54 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v55 = _livEnt.m_21206_();
+                } else {
+                    v55 = ItemStack.f_41583_;
+                }
+                if (v55.getItem() == KuromymodModItems.TOTEMNUTRIA.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEMNUTRIA.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v56 = _livEnt.hasEffect();
+        } else {
+            v56 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v57 = _livEnt.m_21205_();
+        } else {
+            v57 = ItemStack.f_41583_;
+        }
+        if (v57.getItem() == KuromymodModItems.PHANTOM.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.PHANTOM.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v58 = _livEnt.hasEffect();
+            } else {
+                v58 = -1.0f;
+            }
+            if (v58 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v59 = _livEnt.m_21206_();
+                } else {
+                    v59 = ItemStack.f_41583_;
+                }
+                if (v59.getItem() == KuromymodModItems.PHANTOM.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.PHANTOM.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v60 = _livEnt.hasEffect();
+        } else {
+            v60 = -1.0f;
+        }
+        // GOTO statement removed by fixer
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v61 = _livEnt.m_21205_();
+        } else {
+            v61 = ItemStack.f_41583_;
+        }
+        if (v61.getItem() == KuromymodModItems.TOTEM_AMONGUS.get()) {
+            if (world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_AMONGUS.get()));
+            }
+        // 2 sources
+
+        {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v62 = _livEnt.hasEffect();
+            } else {
+                v62 = -1.0f;
+            }
+            if (v62 < 1.0f) {
+                if (entity instanceof LivingEntity) {
+                    _livEnt = (LivingEntity)entity;
+                    v63 = _livEnt.m_21206_();
+                } else {
+                    v63 = ItemStack.f_41583_;
+                }
+                if (v63.getItem() == KuromymodModItems.TOTEM_AMONGUS.get() && world.isClientSide) {
+                    Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_AMONGUS.get()));
+                }
+            }
+        }
+        if (entity instanceof LivingEntity) {
+            _livEnt = (LivingEntity)entity;
+            v64 = _livEnt.hasEffect();
+        } else {
+            v64 = -1.0f;
+        }
+        if (v64 < 1.0f) {
+            if (entity instanceof LivingEntity) {
+                _livEnt = (LivingEntity)entity;
+                v65 = _livEnt.m_21205_();
+            } else {
+                v65 = ItemStack.f_41583_;
+            }
+            if (v65.getItem() == KuromymodModItems.TOTEM_BLAZE.get() && world.isClientSide) {
+                Minecraft.m_91087_().f_91063_.m_109113_(new ItemStack((ItemLike)KuromymodModItems.TOTEM_BLAZE.get()));
+            }
+        }
+    }
+}
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

@@ -1,0 +1,56 @@
+{
+  "memory": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kuromymod:memory-slowed-reverb",
+        "stream": false
+      }
+    ]
+  },
+  "magia": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kuromymod:dark-magic-sound-effects",
+        "stream": false
+      }
+    ]
+  },
+  "intro": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kuromymod:y2mate.com-undertale-sound-effect-intro",
+        "stream": false
+      }
+    ]
+  },
+  "inicio": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kuromymod:y2mate.com-undertale-ost-086-dont-give-up",
+        "stream": false
+      }
+    ]
+  },
+  "despertar": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kuromymod:y2mate.com-dream-sound-effect",
+        "stream": false
+      }
+    ]
+  },
+  "pop": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "kuromymod:y2mate.com-text-popout-free-sound-effect-1",
+        "stream": false
+      }
+    ]
+  }
+}

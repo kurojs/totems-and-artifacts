@@ -1,0 +1,88 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  net.minecraft.world.InteractionHand
+ *  net.minecraft.world.InteractionResultHolder
+ *  net.minecraft.world.entity.Entity
+ *  net.minecraft.world.entity.LivingEntity
+ *  net.minecraft.world.entity.player.Player
+ *  net.minecraft.world.item.CreativeModeTab
+ *  net.minecraft.world.item.Item$Properties
+ *  net.minecraft.world.item.ItemStack
+ *  net.minecraft.world.item.SwordItem
+ *  net.minecraft.world.item.Tier
+ *  net.minecraft.world.item.crafting.Ingredient
+ *  net.minecraft.world.level.Level
+ *  net.minecraft.world.level.LevelAccessor
+ */
+package net.mcreator.totemsserverhardcore.item;
+
+import net.mcreator.totemsserverhardcore.procedures.AtacarProcedure;
+import net.mcreator.totemsserverhardcore.procedures.ClickderechoProcedure;
+import net.mcreator.totemsserverhardcore.procedures.PasivoejemploProcedure;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+
+public class FrostswordItem
+extends SwordItem {
+    public FrostswordItem() {
+        super(new Tier(){
+
+            public int getUses() {
+                return 2000;
+            }
+
+            public float getSpeed() {
+                return 12.0f;
+            }
+
+            public float getAttackDamageBonus() {
+                return 18.0f;
+            }
+
+            public int getLevel() {
+                return 1;
+            }
+
+            public int getEnchantmentValue() {
+                return 10;
+            }
+
+            public Ingredient getRepairIngredient() {
+                return Ingredient.f_43901_;
+            }
+        }, 3, -3.0f, new Item.Properties().tab(CreativeModeTab.TAB_BREWING));
+    }
+
+    public boolean m_7579_(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+        boolean retval = super.m_7579_(itemstack, entity, sourceentity);
+        AtacarProcedure.execute((LevelAccessor)entity.FIRE_RESISTANCE, entity.getX(), entity.getY(), entity.getZ(), (Entity)entity);
+        return retval;
+    }
+
+    public InteractionResultHolder<ItemStack> m_7203_(Level world, Player entity, InteractionHand hand) {
+        InteractionResultHolder ar = super.use(world, entity, hand);
+        ClickderechoProcedure.execute((LevelAccessor)world, entity.getX(), entity.getY(), entity.getZ(), (Entity)entity, (ItemStack)ar.getObject());
+        return ar;
+    }
+
+    public void m_6883_(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+        super.m_6883_(itemstack, world, entity, slot, selected);
+        if (selected) {
+            PasivoejemploProcedure.execute(entity);
+        }
+    }
+}
+

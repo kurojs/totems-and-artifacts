@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="Academic Free License v3.0"
+issueTrackerURL="https://github.com/yourusername/kuromymod/issues"
+
+[[mods]]
+modId="kuromymod"
+version="1.0.0"
+displayName="Kuromy Mod"
+updateJSONURL=""
+displayURL="https://github.com/yourusername/kuromymod"
+logoFile=""
+credits="Decompiled and rebuilt for Forge MDK"
+authors="Kuromy"
+description='''
+Kuromy's custom Minecraft mod with unique features and content designed to enhance your Minecraft experience.
+'''
+
+[[dependencies.kuromymod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.kuromymod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2]"
+    ordering="NONE"
+    side="BOTH"

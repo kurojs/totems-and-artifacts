@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "kuromymod:blocks/leaves",
+    "up": "kuromymod:blocks/leaves",
+    "north": "kuromymod:blocks/leaves",
+    "east": "kuromymod:blocks/leaves",
+    "south": "kuromymod:blocks/leaves",
+    "west": "kuromymod:blocks/leaves",
+    "particle": "kuromymod:blocks/leaves"
+  },
+  "render_type": "solid"
+}
