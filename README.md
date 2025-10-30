@@ -4,6 +4,8 @@ A comprehensive Minecraft mod that adds custom totems with unique effects, speci
 
 ## Features
 
+![Kuromy Mod Preview](https://i.imgur.com/7mDZumN.png)
+
 ### Totems
 - **15+ Unique Totems** with special abilities when equipped in the offhand
 - **Death Protection** with totem animation effects
